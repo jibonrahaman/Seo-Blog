@@ -13,8 +13,10 @@ export default function Banner() {
     <section className="   bg-[#f0f2f5]">
    
    <div className=" max-w-container mx-auto py-20">
-   <div className=" relative">
-    <img className=" rounded-lg" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/post-seo-grid-01.jpg" alt="banner" />
+   <div className=" relative w-[52%] group">
+   <div className="overflow-hidden  ">
+   <img className=" rounded-lg  group-hover:scale-110 duration-300" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/post-seo-grid-01.jpg" alt="banner" />
+   </div>
     <Card className="mt-6 w-[580px] pb-6 absolute top-[62%] left-14">
     <CardBody>
         <a className=" text-[#da474e] cursor-pointer py-3">RESEARCH</a>
