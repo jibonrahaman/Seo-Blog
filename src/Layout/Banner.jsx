@@ -6,6 +6,8 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
+ import "../App.css"
+import HoverUnderline from "../Components/HoverUnderline";
 export default function Banner() {
   return (
     <section className="   bg-[#f0f2f5]">
@@ -16,7 +18,7 @@ export default function Banner() {
     <Card className="mt-6 w-[580px] pb-6 absolute top-[62%] left-14">
     <CardBody>
         <a className=" text-[#da474e] cursor-pointer py-3">RESEARCH</a>
-       <h4 className="pt-3 font-semibold text-3xl text-black">How to write a title with an optimal width for SEO</h4>
+       <HoverUnderline  text="How to write a title with an optimal width for SEO"/>
       </CardBody>
       <CardFooter className="pt-0">
      <div className=" flex items-center justify-between ">
