@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ .name {
+    color: transparent;
+ }
+
+.name::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    white-space: nowrap;
+    color: #3858f6; 
+    display: block;
+    transform-origin: left bottom;
+    transition: top .5s; 
+}
+
+.group:hover .name::before {
+    top: 0%; 
+}
+
+.name::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    white-space: nowrap;
+    color: red; 
+    display: block;
+    transform-origin: left top; 
+    transition: bottom .5s; 
+ 
+}
+
+.group:hover .name::after {
+    bottom: 100%; 
+}
