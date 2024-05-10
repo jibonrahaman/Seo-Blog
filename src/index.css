@@ -11,7 +11,7 @@
     left: 0;
     top: 100%;
     white-space: nowrap;
-    color: #3858f6; 
+    color: green; 
     display: block;
     transform-origin: left bottom;
     transition: top .5s; 

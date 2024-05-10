@@ -8,6 +8,7 @@ import {
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import "../App.css"
 import HoverUnderline from "../Components/HoverUnderline";
+import HoverHiddenShoData from "../Components/HoverHiddenShoData";
 export default function Banner() {
   return (
     <section className="   bg-[#f0f2f5]">
@@ -18,15 +19,15 @@ export default function Banner() {
           </div>
           <Card className="mt-6 w-[580px] pb-6 absolute top-[60%] left-14 ">
             <CardBody>
-              <a className=" text-[#da474e] cursor-pointer py-3">RESEARCH</a>
+              <HoverHiddenShoData dataText="RESEARCH" text="RESEARCH" />
               <HoverUnderline text="How to write a title with an optimal width for SEO" />
             </CardBody>
             <CardFooter className="pt-0">
               <div className=" flex items-center justify-between ">
                 <div className=" flex gap-x-3">
                   <img className=" w-30 rounded-full" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/author/author-image-2.png" alt="" />
-                  <div >
-                    <h5 data-text="Rahabi Khan" className="relative  cursor-pointer text-lg  text-black name overflow-hidden  ">Rahabi Khan</h5>
+                  <div>
+                    <HoverHiddenShoData dataText="Rahabi Khan" text="Rahabi Khan" />
                     <p>Feb 17, 2019 300k Views</p>
                   </div>
                 </div>
