@@ -1,11 +1,17 @@
+import { useState } from "react"
 import Container from "../Components/Container"
 import Flex from "../Components/Flex"
 import Heading from "../Components/Heading"
 import HoverHiddenShoData from "../Components/HoverHiddenShoData"
 import HoverUnderline from "../Components/HoverUnderline"
 import ScaleImg from "../Components/ScaleImg"
+import BlogerMixi from "../Data/Blogmixi"
 export default function BlogerMixitup() {
-  return (
+    const [Data,setData] = useState(BlogerMixi)
+    const filt = Data.filter((item)=>{
+        console.log(item.title);
+    })
+    return (
     <section>
         <Container className=" mx-auto py-5">
          <Heading text="What's new at Bloger"/>
@@ -16,7 +22,6 @@ export default function BlogerMixitup() {
             <button className="px-8 cursor-pointer py-3 bg-white text-black rounded-lg shadow-shadow border">Branding</button>
          </Flex>
          <Flex className=" gap-x-10 justify-between">
-
           <div className=" bg-[#f0f2f5]  group rounded-xl ">
           <div className=" p-10 flex flex-col w-[400px] items-center">
                 <HoverHiddenShoData dataText="GADGETS"  text='GADGETS' />
@@ -27,7 +32,6 @@ export default function BlogerMixitup() {
                 <ScaleImg className=" w-full" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/post-column-11.jpg" alt="mixi-1" />
             </div>
           </div>
-
          </Flex>
                  </Container>
     </section>
