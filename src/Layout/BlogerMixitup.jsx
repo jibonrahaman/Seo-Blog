@@ -8,6 +8,8 @@ import ScaleImg from "../Components/ScaleImg"
 import BlogerMixi from "../Data/Blogmixi"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import PrevArrow from "../Components/PrevArrow"
+import NextArrow from "../Components/NextArrow"
 
 export default function BlogerMixitup() {
     const [Datas,setDatas] = useState(BlogerMixi)
@@ -22,11 +24,13 @@ export default function BlogerMixitup() {
         setData(filt)    
     }
     var settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        prevArrow:  <PrevArrow/> ,
+        nextArrow : <NextArrow/> ,
       };
     return (
     <section>
@@ -41,42 +45,48 @@ export default function BlogerMixitup() {
         
         
          <Slider {...settings}>
-         <div >
-         <div className="w-[400px] bg-[#f0f2f5]  group rounded-xl ">
-          <div className=" p-10 flex flex-col w-[400px] items-center">
-                <HoverHiddenShoData dataText="GADGETS"  text='GADGETS' />
-                <HoverUnderline  className=" text-center group-hover:before:w-[300px]" text="Search improvements in Content Explorer" />
+         {
+            Data.length ?
+
+           (
+            Data.map((item,index)=>{                
+                const {test,dataText,underline,img} = item
+               return <div  className="">
+                <div key={index}  className="w-[400px] bg-[#f0f2f5]  group rounded-xl ">
+              <div className=" p-10 flex flex-col w-[400px] items-center">
+                <HoverHiddenShoData dataText={dataText}  text={test} />
+                <HoverUnderline  className={underline} />
             </div>
             <div className=" relative overflow-hidden">
                 <img className="w-full absolute top-0 left-0 z-10 block" src="https://new.axilthemes.com/demo/template/blogar/assets/images/icons/shape-01.png" alt="a" />
-                <ScaleImg className=" w-full" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/post-column-11.jpg" alt="mixi-1" />
+                <ScaleImg className=" w-full" src={img} alt="mixi-1" />
             </div>
           </div>
-         </div>
-          <div >
-         <div className="mx-3 w-[400px] bg-[#f0f2f5]  group rounded-xl ">
-          <div className=" p-10 flex flex-col w-[400px] items-center">
-                <HoverHiddenShoData dataText="GADGETS"  text='GADGETS' />
-                <HoverUnderline  className=" text-center group-hover:before:w-[300px]" text="Search improvements in Content Explorer" />
+               </div>
+            })
+           )
+           :
+           (
+            Datas.map((item,index)=>{                
+                const {test,dataText,underline,img} = item
+              if(item.title === "Search"){
+                return <div key={index} >
+                <div  className="w-[400px] bg-[#f0f2f5]  group rounded-xl ">
+              <div className=" p-10 flex flex-col w-[400px] items-center">
+                <HoverHiddenShoData dataText={dataText}  text={test} />
+                <HoverUnderline  className={underline} />
             </div>
             <div className=" relative overflow-hidden">
                 <img className="w-full absolute top-0 left-0 z-10 block" src="https://new.axilthemes.com/demo/template/blogar/assets/images/icons/shape-01.png" alt="a" />
-                <ScaleImg className=" w-full" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/post-column-11.jpg" alt="mixi-1" />
+                <ScaleImg className=" w-full" src={img} alt="mixi-1" />
             </div>
           </div>
-         </div>
-          <div >
-         <div className="mx-3 w-[400px] bg-[#f0f2f5]  group rounded-xl ">
-          <div className=" p-10 flex flex-col w-[400px] items-center">
-                <HoverHiddenShoData dataText="GADGETS"  text='GADGETS' />
-                <HoverUnderline  className=" text-center group-hover:before:w-[300px]" text="Search improvements in Content Explorer" />
-            </div>
-            <div className=" relative overflow-hidden">
-                <img className="w-full absolute top-0 left-0 z-10 block" src="https://new.axilthemes.com/demo/template/blogar/assets/images/icons/shape-01.png" alt="a" />
-                <ScaleImg className=" w-full" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/post-column-11.jpg" alt="mixi-1" />
-            </div>
-          </div>
-         </div>
+               </div>
+              }
+            })
+           )
+         }
+        
        </Slider>
         
         
