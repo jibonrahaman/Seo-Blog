@@ -55,7 +55,7 @@ export default function BlogerMixitup() {
                 <div key={index}  className="w-[400px] bg-[#f0f2f5]  group rounded-xl ">
               <div className=" p-10 flex flex-col w-[400px] items-center">
                 <HoverHiddenShoData dataText={dataText}  text={test} />
-                <HoverUnderline  className={underline} />
+                <HoverUnderline  text={underline} />
             </div>
             <div className=" relative overflow-hidden">
                 <img className="w-full absolute top-0 left-0 z-10 block" src="https://new.axilthemes.com/demo/template/blogar/assets/images/icons/shape-01.png" alt="a" />
@@ -74,7 +74,7 @@ export default function BlogerMixitup() {
                 <div  className="w-[400px] bg-[#f0f2f5]  group rounded-xl ">
               <div className=" p-10 flex flex-col w-[400px] items-center">
                 <HoverHiddenShoData dataText={dataText}  text={test} />
-                <HoverUnderline  className={underline} />
+                <HoverUnderline  text={underline} />
             </div>
             <div className=" relative overflow-hidden">
                 <img className="w-full absolute top-0 left-0 z-10 block" src="https://new.axilthemes.com/demo/template/blogar/assets/images/icons/shape-01.png" alt="a" />
