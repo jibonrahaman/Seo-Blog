@@ -19,3 +19,37 @@ export default function HoverUnderline({text,className}) {
 //     </h4>
 //   );
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useState } from "react";
+// export default function HoverUnderline({ text, className }) {
+//   const [Hover,setHover] = useState(false)
+//   const widths = text.length * 7;
+//   console.log(widths);
+// const HanleMousehover = ()=>{
+//   setHover(true)
+// }
+// const handleMouseLeave = ()=>{
+//   setHover(false)
+// }
+//   return (
+//    <div className="w-[300px]">
+//     <div className={className} onMouseOver={HanleMousehover} onMouseLeave={handleMouseLeave} style={{position:"relative"}}>
+//      <div style={{position:"absolute", top:"20px", left:"0",height:"2px", color:"black", width:`${Hover ? widths : 0}px`, background:"green", transition:'0.5s ease'}}> 
+//     </div> 
+//      {text}
+//    </div>
+//    </div>
+//   );
+// }
