@@ -8,10 +8,10 @@ function App() {
 
   return (
     <>
-    {/* <Home/> */}
+    <Home/>
     <Banner/>
-    {/* <JustImg /> */}
-    {/* <BlogerMixitup/> */}
+    <JustImg />
+    <BlogerMixitup/>
     </>
   )
 }
