@@ -14,8 +14,10 @@ import NextArrow from "../Components/NextArrow"
 export default function BlogerMixitup() {
     const [Datas,setDatas] = useState(BlogerMixi)
     const [Data,setData] = useState([])
-   
+    const [activeBtn,setactiveBtn] = useState("Search");
+   console.log(activeBtn);
     const handleClickMixi = (name)=>{
+      setactiveBtn(name)
       const filt =  Datas.filter((item)=>{
             if(item.title === name){
                return item
@@ -37,10 +39,10 @@ export default function BlogerMixitup() {
         <Container className=" mx-auto py-5">
          <Heading text="What's new at Bloger"/>
          <Flex className=" gap-x-8 py-10">
-            <button onClick={()=>handleClickMixi("Search")} className="px-8 cursor-pointer py-3 bg-white text-black rounded-lg shadow-shadow border">Search Engines</button>
-            <button onClick={()=>handleClickMixi("Research")} className="px-8 cursor-pointer py-3 bg-white text-black rounded-lg shadow-shadow border">Research</button>
-            <button onClick={()=>handleClickMixi("Marketing")} className="px-8 cursor-pointer py-3 bg-white text-black rounded-lg shadow-shadow border">Marketing</button>
-            <button onClick={()=>handleClickMixi("Branding")} className="px-8 cursor-pointer py-3 bg-white text-black rounded-lg shadow-shadow border">Branding</button>
+            <button onClick={()=>handleClickMixi("Search")} className={`px-8 cursor-pointer py-3 bg-white text-black rounded-lg   ${activeBtn == "Search" ? "shadow-shadow" : "border"}`}>Search Engines</button>
+            <button onClick={()=>handleClickMixi("Research")} className={`px-8 cursor-pointer py-3 bg-white text-black rounded-lg   ${activeBtn == "Research" ? "shadow-shadow" : "border"}`}>Research</button>
+            <button onClick={()=>handleClickMixi("Marketing")} className={`px-8 cursor-pointer py-3 bg-white text-black rounded-lg   ${activeBtn == "Marketing" ? "shadow-shadow" : "border"}`}>Marketing</button>
+            <button onClick={()=>handleClickMixi("Branding")} className={`px-8 cursor-pointer py-3 bg-white text-black rounded-lg   ${activeBtn == "Branding" ? "shadow-shadow" : "border"}`}>Branding</button>
          </Flex>
         
         
@@ -51,8 +53,8 @@ export default function BlogerMixitup() {
            (
             Data.map((item,index)=>{                
                 const {test,dataText,underline,img} = item
-               return <div  className="">
-                <div key={index}  className="w-[400px] bg-[#f0f2f5]  group rounded-xl ">
+               return <div key={index}>
+                <div   className="w-[400px] bg-[#f0f2f5]  group rounded-xl ">
               <div className=" p-10 flex flex-col w-[400px] items-center">
                 <HoverHiddenShoData dataText={dataText}  text={test} />
                 <HoverUnderline  text={underline} />
@@ -87,10 +89,8 @@ export default function BlogerMixitup() {
            )
          }
         
-       </Slider>
-        
-        
-                 </Container>
+       </Slider>   
+      </Container>
     </section>
   )
 }
