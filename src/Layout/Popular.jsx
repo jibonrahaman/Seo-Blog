@@ -48,7 +48,7 @@ export default function Popular() {
                 </div>
                 <div className=" group relative mt-20">
                   <div className="overflow-hidden">
-                    <ScaleImg src={img2} alt={img2} />
+                    <ScaleImg src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/post-grid-11.jpg" alt="mixi-1" />
                   </div>
                   <div className=" bg-white w-[400px] absolute top-[190px] left-10 rounded-xl px-11 py-5">
                     <HoverHiddenShoData dataText={dataText2} text={test2} />
@@ -59,10 +59,10 @@ export default function Popular() {
 
               <div className=" group   relative ">
                 <div className="overflow-hidden">
-                  <ScaleImg src={img3} alt="mixi-1" />
+                  <ScaleImg src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/post-grid-12.jpg" alt="mixi-1" />
                 </div>
                 <div className=" bg-white w-[550px] absolute bottom-[-35px] left-20 rounded-xl px-14 py-5">
-                  <HoverHiddenShoData dataText={dataText3} text={tes} />
+                  <HoverHiddenShoData dataText="SEO" text="SEO" />
                   <HoverUnderline className="py-3" text="A five-step framework for effective keyword targeting" />
                   <div className="flex gap-x-3 pt-3">
                     <img className=" w-30 rounded-full" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/author/author-image-2.png" alt="" />
