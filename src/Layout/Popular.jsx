@@ -33,9 +33,7 @@ export default function Popular() {
         </Flex>
 
        {Data.map((item)=>{
-        <div key={index}>
-
-        </div>
+        console.log(item);
        })}
       </Container>
     </section>
