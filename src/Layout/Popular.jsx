@@ -33,50 +33,97 @@ export default function Popular() {
         </Flex>
 
         {
-        Data.map((item, index) => {
-           const {test,dataText,underline,img,test2,dataText2,underline2,img2,test3,dataText3,underline3,img3} = item
-          return <div key={index}>
-            <Flex className=" gap-x-24">
-              <div>
-                <div className=" group relative">
-                  <div className="overflow-hidden">
-                    <ScaleImg src={img} alt={img} />
-                  </div>
-                  <div className=" bg-white w-[400px] absolute top-[190px] left-10 rounded-xl px-11 py-5">
-                    <HoverHiddenShoData dataText={dataText} text={test} />
-                    <HoverUnderline text="How to create white papers that convert" />
-                  </div>
-                </div>
-                <div className=" group relative mt-20">
-                  <div className="overflow-hidden">
-                    <ScaleImg src={img2} alt={img2} />
-                  </div>
-                  <div className=" bg-white w-[400px] absolute top-[190px] left-10 rounded-xl px-11 py-5">
-                    <HoverHiddenShoData dataText={dataText2} text={test2} />
-                    <HoverUnderline text="Building agility with technology and talent" />
-                  </div>
-                </div>
-              </div>
+       Data.length ?
+       ( Data.map((item, index) => {
+        const {test,dataText,underline,img,test2,dataText2,underline2,img2,test3,dataText3,underline3,img3} = item
+       return <div key={index}>
+         <Flex className=" gap-x-24">
+           <div>
+             <div className=" group relative">
+               <div className="overflow-hidden">
+                 <ScaleImg src={img} alt={img} />
+               </div>
+               <div className=" bg-white w-[400px] absolute top-[190px] left-10 rounded-xl px-11 py-5">
+                 <HoverHiddenShoData dataText={dataText} text={test} />
+                 <HoverUnderline text="How to create white papers that convert" />
+               </div>
+             </div>
+             <div className=" group relative mt-20">
+               <div className="overflow-hidden">
+                 <ScaleImg src={img2} alt={img2} />
+               </div>
+               <div className=" bg-white w-[400px] absolute top-[190px] left-10 rounded-xl px-11 py-5">
+                 <HoverHiddenShoData dataText={dataText2} text={test2} />
+                 <HoverUnderline text="Building agility with technology and talent" />
+               </div>
+             </div>
+           </div>
 
-              <div className=" group   relative ">
-                <div className="overflow-hidden">
-                  <ScaleImg src={img3} alt="mixi-1" />
-                </div>
-                <div className=" bg-white w-[550px] absolute bottom-[-35px] left-20 rounded-xl px-14 py-5">
-                  <HoverHiddenShoData dataText={dataText3} text={test3} />
-                  <HoverUnderline className="py-3" text="A five-step framework for effective keyword targeting" />
-                  <div className="flex gap-x-3 pt-3">
-                    <img className=" w-30 rounded-full" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/author/author-image-2.png" alt="" />
-                    <div>
-                      <HoverHiddenShoData dataText="Rahabi Khan" text="Rahabi Khan" />
-                      <p>Feb 17, 2019 300k Views</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Flex>
-          </div>
-        })}
+           <div className=" group   relative ">
+             <div className="overflow-hidden">
+               <ScaleImg src={img3} alt="mixi-1" />
+             </div>
+             <div className=" bg-white w-[550px] absolute bottom-[-35px] left-20 rounded-xl px-14 py-5">
+               <HoverHiddenShoData dataText={dataText3} text={test3} />
+               <HoverUnderline className="py-3" text="A five-step framework for effective keyword targeting" />
+               <div className="flex gap-x-3 pt-3">
+                 <img className=" w-30 rounded-full" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/author/author-image-2.png" alt="" />
+                 <div>
+                   <HoverHiddenShoData dataText="Rahabi Khan" text="Rahabi Khan" />
+                   <p>Feb 17, 2019 300k Views</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </Flex>
+       </div>
+     }))
+     :
+     ( Datas.map((item, index) => {
+      const {test,dataText,underline,img,test2,dataText2,underline2,img2,test3,dataText3,underline3,img3} = item
+     return <div key={index}>
+       <Flex className=" gap-x-24">
+         <div>
+           <div className=" group relative">
+             <div className="overflow-hidden">
+               <ScaleImg src={img} alt={img} />
+             </div>
+             <div className=" bg-white w-[400px] absolute top-[190px] left-10 rounded-xl px-11 py-5">
+               <HoverHiddenShoData dataText={dataText} text={test} />
+               <HoverUnderline text="How to create white papers that convert" />
+             </div>
+           </div>
+           <div className=" group relative mt-20">
+             <div className="overflow-hidden">
+               <ScaleImg src={img2} alt={img2} />
+             </div>
+             <div className=" bg-white w-[400px] absolute top-[190px] left-10 rounded-xl px-11 py-5">
+               <HoverHiddenShoData dataText={dataText2} text={test2} />
+               <HoverUnderline text="Building agility with technology and talent" />
+             </div>
+           </div>
+         </div>
+
+         <div className=" group   relative ">
+           <div className="overflow-hidden">
+             <ScaleImg src={img3} alt="mixi-1" />
+           </div>
+           <div className=" bg-white w-[550px] absolute bottom-[-35px] left-20 rounded-xl px-14 py-5">
+             <HoverHiddenShoData dataText={dataText3} text={test3} />
+             <HoverUnderline className="py-3" text="A five-step framework for effective keyword targeting" />
+             <div className="flex gap-x-3 pt-3">
+               <img className=" w-30 rounded-full" src="https://new.axilthemes.com/demo/template/blogar/assets/images/post-images/author/author-image-2.png" alt="" />
+               <div>
+                 <HoverHiddenShoData dataText="Rahabi Khan" text="Rahabi Khan" />
+                 <p>Feb 17, 2019 300k Views</p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </Flex>
+     </div>
+   }))
+        }
       </Container>
     </section>
   )
