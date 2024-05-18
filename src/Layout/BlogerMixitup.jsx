@@ -15,7 +15,7 @@ export default function BlogerMixitup() {
     const [Datas,setDatas] = useState(BlogerMixi)
     const [Data,setData] = useState([])
     const [activeBtn,setactiveBtn] = useState("Search");
-   console.log(activeBtn);
+   
     const handleClickMixi = (name)=>{
       setactiveBtn(name)
       const filt =  Datas.filter((item)=>{
